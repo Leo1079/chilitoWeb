@@ -384,9 +384,9 @@ body {
 }
 
 .slide-content > .video-placeholder {
-  max-width: 560px;
+  max-width: 420px;
   margin: 0 auto;
-  min-height: 200px;
+  min-height: 150px;
 }
 
 .video-placeholder:hover {
@@ -529,9 +529,9 @@ body {
 }
 
 .slide-content > .photo-placeholder {
-  max-width: 600px;
+  max-width: 480px;
   margin: 0 auto;
-  min-height: 280px;
+  min-height: 220px;
 }
 
 .photo-placeholder img {

@@ -6,7 +6,7 @@
 (function () {
   'use strict';
 
-  const TOTAL_SLIDES = 22;
+  const TOTAL_SLIDES = 21;
   let currentSlide = 1;
   let isTransitioning = false;
   let touchStartX = 0;
@@ -42,8 +42,7 @@
     'Videos 13 y 14',
     'Usos del Chilto',
     'Videos 15, 16 y 17',
-    'Agradecimientos',
-    'Autoridades y docentes',
+    'Autoridades y docentes del I.A.O.C.',
     'Cierre'
   ];
 
