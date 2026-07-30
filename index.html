@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tomate de Árbol, Chilto — I.A.O.C.</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN SUPERIOR -->
+  <nav id="navbar">
+    <button id="menu-toggle" aria-label="Abrir menú">☰</button>
+    <span id="slide-counter">Diapositiva 1 de 22</span>
+    <div id="nav-controls">
+      <button id="prev-slide" class="nav-btn">← Anterior</button>
+      <button id="next-slide" class="nav-btn">Siguiente →</button>
+    </div>
+  </nav>
+
+  <!-- MENÚ LATERAL -->
+  <div id="side-menu" class="side-menu hidden">
+    <button id="menu-close" aria-label="Cerrar menú">✕</button>
+    <h3>Índice</h3>
+    <ul id="menu-list"></ul>
+  </div>
+  <div id="menu-overlay" class="hidden"></div>
+
+  <!-- CONTENEDOR DE DIAPOSITIVAS -->
+  <main id="slides-container">
+
+    <!-- D1 — PORTADA -->
+    <section class="slide" data-slide="1">
+      <div class="slide-bg"></div>
+      <div class="slide-content center">
+        <div class="hero-overlay">
+          <h1 class="hero-title">Tomate de árbol, <span>Chilto</span></h1>
+          <p class="hero-subtitle">Instituto Agrotécnico Obispo Colombres</p>
+          <div class="hero-decor">
+            <span class="leaf leaf-1"></span>
+            <span class="leaf leaf-2"></span>
+            <span class="leaf leaf-3"></span>
+          </div>
+          <button class="scroll-hint" onclick="goToSlide(2)">▼</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- D2 — VIDEO 01 -->
+    <section class="slide" data-slide="2">
+      <div class="slide-content">
+        <h2 class="slide-title">🎥 VIDEO 01</h2>
+        <div class="video-placeholder" data-video="video-01.mp4">
+          <video controls preload="metadata" playsinline>
+            <source src="assets/videos/video-01.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- D3 — REPRODUCCIÓN A TRAVÉS DE SEMILLAS -->
+    <section class="slide" data-slide="3">
+      <div class="slide-content">
+        <h2 class="slide-title">Reproducción a través de semillas</h2>
+        <div class="process-flow">
+          <div class="process-step">
+            <div class="step-icon">🌱</div>
+            <span>Semilla</span>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="step-icon">🌰</div>
+            <span>Germinación</span>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="step-icon">🌿</div>
+            <span>Plántula</span>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="step-icon">🌳</div>
+            <span>Desarrollo</span>
+          </div>
+        </div>
+        <div class="info-card">
+          <p>La reproducción por semillas es el método natural de propagación del tomate de árbol. Las semillas se extraen de frutos maduros, se lavan y se secan a la sombra antes de la siembra. La germinación ocurre entre los 15 y 30 días, dependiendo de las condiciones de temperatura y humedad.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- D4 — FOTO REPRODUCCIÓN A TRAVÉS DE SEMILLAS -->
+    <section class="slide" data-slide="4">
+      <div class="slide-content">
+        <h2 class="slide-title">📷 FOTO — Reproducción a través de semillas</h2>
+        <div class="photo-placeholder" data-image="reproduccion-semillas.jpg">
+          <img src="assets/images/reproduccion-semillas.jpg.jpeg" alt="Reproducción a través de semillas">
+        </div>
+      </div>
+    </section>
+
+    <!-- D5 — REPRODUCCIÓN A TRAVÉS DE ESTACA -->
+    <section class="slide" data-slide="5">
+      <div class="slide-content">
+        <h2 class="slide-title">Reproducción a través de estaca</h2>
+        <div class="process-flow">
+          <div class="process-step">
+            <div class="step-icon">✂️</div>
+            <span>Selección</span>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="step-icon">🌱</div>
+            <span>Corte</span>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="step-icon">💧</div>
+            <span>Enraizamiento</span>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="step-icon">🌿</div>
+            <span>Plantación</span>
+          </div>
+        </div>
+        <div class="info-card">
+          <p>La reproducción por estacas (esquejes) es un método de propagación vegetativa que permite obtener plantas genéticamente idénticas a la planta madre. Se seleccionan ramas semileñosas de aproximadamente 20-30 cm, se eliminan las hojas inferiores y se colocan en un sustrato húmedo para promover el enraizamiento.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- D6 — VIDEOS 02, 03, 04, 05 Y 06 -->
+    <section class="slide" data-slide="6">
+      <div class="slide-content">
+        <h2 class="slide-title">Videos — Reproducción</h2>
+        <div class="video-grid">
+          <div class="video-placeholder" data-video="video-02.mp4">
+            <video controls preload="metadata" playsinline>
+              <source src="assets/videos/video-02.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-placeholder" data-video="video-03.mp4">
+            <video controls preload="metadata" playsinline>
+              <source src="assets/videos/video-03.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-placeholder" data-video="video-04.mp4">
+            <video controls preload="metadata" playsinline>
+              <source src="assets/videos/video-04.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-placeholder" data-video="video-05.mp4">
+            <video controls preload="metadata" playsinline>
+              <source src="assets/videos/video-05.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-placeholder" data-video="video-06.mp4">
+            <video controls preload="metadata" playsinline>
+              <source src="assets/videos/video-06.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- D7 — FRUTO: COLORIMETRÍA Y MADUREZ -->
+    <section class="slide" data-slide="7">
+      <div class="slide-content">
+        <h2 class="slide-title">Fruto: Colorimetría y madurez</h2>
+        <div class="color-strip">
+          <div class="color-chip" style="--chip-color: #4caf50;">
+            <span class="chip-label">Verde</span>
+            <span class="chip-desc">Inmaduro</span>
+          </div>
+          <div class="color-chip" style="--chip-color: #8bc34a;">
+            <span class="chip-label">Verde amarillento</span>
+            <span class="chip-desc">Pintón</span>
+          </div>
+          <div class="color-chip" style="--chip-color: #ffeb3b;">
+            <span class="chip-label">Amarillo</span>
+            <span class="chip-desc">En maduración</span>
+          </div>
+          <div class="color-chip" style="--chip-color: #ff9800;">
+            <span class="chip-label">Naranja</span>
+            <span class="chip-desc">Maduro</span>
+          </div>
+          <div class="color-chip" style="--chip-color: #e65100;">
+            <span class="chip-label">Rojo/Naranja intenso</span>
+            <span class="chip-desc">Madurez completa</span>
+          </div>
+        </div>
+        <div class="info-card">
+          <p>El color del fruto es el principal indicador del estado de madurez del tomate de árbol. A medida que el fruto madura, pasa de verde a verde amarillento, luego a amarillo, naranja y finalmente a un rojo/naranja intenso. La colorimetría permite determinar el momento óptimo de cosecha según el destino del fruto.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- D8 — VIDEO 07 -->
+    <section class="slide" data-slide="8">
+      <div class="slide-content">
+        <h2 class="slide-title">🎥 VIDEO 07</h2>
+        <div class="video-placeholder" data-video="video-07.mp4">
+          <video controls preload="metadata" playsinline>
+            <source src="assets/videos/video-07.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- D9 — MARCO DE PLANTACIÓN -->
+    <section class="slide" data-slide="9">
+      <div class="slide-content">
+        <h2 class="slide-title">Marco de plantación</h2>
+        <div class="plantation-container">
+          <div class="plantation-field">
+            <svg viewBox="0 0 400 300" class="plantation-svg">
+              <rect width="400" height="300" fill="#8d6e63" rx="8"/>
+              <!-- Hileras -->
+              <g class="row">
+                <line x1="50" y1="30" x2="350" y2="30" stroke="#5d4037" stroke-width="1" stroke-dasharray="4,4"/>
+                <circle cx="60" cy="30" r="8" fill="#4caf50"/>
+                <circle cx="110" cy="30" r="8" fill="#4caf50"/>
+                <circle cx="160" cy="30" r="8" fill="#4caf50"/>
+                <circle cx="210" cy="30" r="8" fill="#4caf50"/>
+                <circle cx="260" cy="30" r="8" fill="#4caf50"/>
+                <circle cx="310" cy="30" r="8" fill="#4caf50"/>
+              </g>
+              <g class="row">
+                <line x1="50" y1="80" x2="350" y2="80" stroke="#5d4037" stroke-width="1" stroke-dasharray="4,4"/>
+                <circle cx="60" cy="80" r="8" fill="#66bb6a"/>
+                <circle cx="110" cy="80" r="8" fill="#66bb6a"/>
+                <circle cx="160" cy="80" r="8" fill="#66bb6a"/>
+                <circle cx="210" cy="80" r="8" fill="#66bb6a"/>
+                <circle cx="260" cy="80" r="8" fill="#66bb6a"/>
+                <circle cx="310" cy="80" r="8" fill="#66bb6a"/>
+              </g>
+              <g class="row">
+                <line x1="50" y1="130" x2="350" y2="130" stroke="#5d4037" stroke-width="1" stroke-dasharray="4,4"/>
+                <circle cx="60" cy="130" r="8" fill="#81c784"/>
+                <circle cx="110" cy="130" r="8" fill="#81c784"/>
+                <circle cx="160" cy="130" r="8" fill="#81c784"/>
+                <circle cx="210" cy="130" r="8" fill="#81c784"/>
+                <circle cx="260" cy="130" r="8" fill="#81c784"/>
+                <circle cx="310" cy="130" r="8" fill="#81c784"/>
+              </g>
+              <g class="row">
+                <line x1="50" y1="180" x2="350" y2="180" stroke="#5d4037" stroke-width="1" stroke-dasharray="4,4"/>
+                <circle cx="60" cy="180" r="8" fill="#a5d6a7"/>
+                <circle cx="110" cy="180" r="8" fill="#a5d6a7"/>
+                <circle cx="160" cy="180" r="8" fill="#a5d6a7"/>
+                <circle cx="210" cy="180" r="8" fill="#a5d6a7"/>
+                <circle cx="260" cy="180" r="8" fill="#a5d6a7"/>
+                <circle cx="310" cy="180" r="8" fill="#a5d6a7"/>
+              </g>
+              <g class="row">
+                <line x1="50" y1="230" x2="350" y2="230" stroke="#5d4037" stroke-width="1" stroke-dasharray="4,4"/>
+                <circle cx="60" cy="230" r="8" fill="#c8e6c9"/>
+                <circle cx="110" cy="230" r="8" fill="#c8e6c9"/>
+                <circle cx="160" cy="230" r="8" fill="#c8e6c9"/>
+                <circle cx="210" cy="230" r="8" fill="#c8e6c9"/>
+                <circle cx="260" cy="230" r="8" fill="#c8e6c9"/>
+                <circle cx="310" cy="230" r="8" fill="#c8e6c9"/>
+              </g>
+              <text x="200" y="275" text-anchor="middle" fill="#3e2723" font-size="11" font-family="sans-serif">Campo de cultivo — Tomate de árbol</text>
+            </svg>
+          </div>
+          <div class="plantation-info">
+            <div class="info-card">
+              <p><strong>Distancia entre plantas:</strong> <span contenteditable="true" class="editable">2 m</span></p>
+              <p><strong>Distancia entre hileras:</strong> <span contenteditable="true" class="editable">3 m</span></p>
+              <p><strong>Densidad:</strong> <span contenteditable="true" class="editable">1666</span> plantas/ha</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- D10 — VIDEO 08 -->
+    <section class="slide" data-slide="10">
+      <div class="slide-content">
+        <h2 class="slide-title">🎥 VIDEO 08</h2>
+        <div class="video-placeholder" data-video="video-08.mp4">
+          <video controls preload="metadata" playsinline>
+            <source src="assets/videos/video-08.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- D11 — COSECHA -->
+    <section class="slide" data-slide="11">
+      <div class="slide-content">
+        <h2 class="slide-title">Cosecha</h2>
+        <div class="harvest-grid">
+          <div class="harvest-card">
+            <div class="harvest-icon">🧺</div>
+            <h3>Recolección</h3>
+            <p>La cosecha se realiza de forma manual, seleccionando los frutos que han alcanzado el grado de madurez adecuado según su destino comercial.</p>
+          </div>
+          <div class="harvest-card">
+            <div class="harvest-icon">🔍</div>
+            <h3>Selección</h3>
+            <p>Se descartan frutos dañados, con plagas o enfermedades. Se clasifican por tamaño, color y calidad.</p>
+          </div>
+          <div class="harvest-card">
+            <div class="harvest-icon">📦</div>
+            <h3>Manipulación</h3>
+            <p>Los frutos se colocan cuidadosamente en recipientes adecuados para evitar golpes y magulladuras que afecten su calidad.</p>
+          </div>
+          <div class="harvest-card">
+            <div class="harvest-icon">🚚</div>
+            <h3>Postcosecha</h3>
+            <p>Se transportan a un lugar fresco y ventilado para su almacenamiento temporal o procesamiento inmediato.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- D12 — FOTO COSECHA -->
+    <section class="slide" data-slide="12">
+      <div class="slide-content">
+        <h2 class="slide-title">📷 FOTO — Cosecha</h2>
+        <div class="photo-placeholder" data-image="cosecha.jpg">
+          <img src="assets/images/cosecha.jpg.jpeg" alt="Cosecha">
+        </div>
+      </div>
+    </section>
+
+    <!-- D13 — VIDEOS 09 Y 10 -->
+    <section class="slide" data-slide="13">
+      <div class="slide-content">
+        <h2 class="slide-title">Videos — Cosecha</h2>
+        <div class="video-pair">
+          <div class="video-placeholder" data-video="video-09.mp4">
+            <video controls preload="metadata" playsinline>
+              <source src="assets/videos/video-09.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-placeholder" data-video="video-10.mp4">
+            <video controls preload="metadata" playsinline>
+              <source src="assets/videos/video-10.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- D14 — JUGO DE TOMATE DE ÁRBOL -->
+    <section class="slide" data-slide="14">
+      <div class="slide-content">
+        <h2 class="slide-title">Jugo de tomate de árbol</h2>
+        <div class="process-flow">
+          <div class="process-step">
+            <div class="step-icon">🍅</div>
+            <span>Fruto</span>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="step-icon">🔪</div>
+            <span>Preparación</span>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="step-icon">⚙️</div>
+            <span>Procesamiento</span>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="step-icon">🥤</div>
+            <span>Jugo</span>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="step-icon">🏷️</div>
+            <span>Producto final</span>
+          </div>
+        </div>
+        <div class="info-card">
+          <p>El jugo de tomate de árbol se obtiene procesando la pulpa del fruto maduro. Es una bebida rica en vitaminas A, C y del complejo B, además de minerales como fósforo, calcio y hierro. Su sabor agridulce lo hace muy versátil para consumo directo o como base de otras preparaciones.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- D15 — VIDEOS 11 Y 12 -->
+    <section class="slide" data-slide="15">
+      <div class="slide-content">
+        <h2 class="slide-title">Elaboración del jugo de tomate de árbol</h2>
+        <div class="video-pair">
+          <div class="video-placeholder" data-video="video-11.mp4">
+            <video controls preload="metadata" playsinline>
+              <source src="assets/videos/video-11.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-placeholder" data-video="video-12.mp4">
+            <video controls preload="metadata" playsinline>
+              <source src="assets/videos/video-12.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- D16 — CHUTNEY -->
+    <section class="slide" data-slide="16">
+      <div class="slide-content">
+        <h2 class="slide-title">Chutney</h2>
+        <div class="process-flow">
+          <div class="process-step">
+            <div class="step-icon">🍅</div>
+            <span>Selección</span>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="step-icon">🔪</div>
+            <span>Picado</span>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="step-icon">🍳</div>
+            <span>Cocción</span>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="step-icon">🧂</div>
+            <span>Condimentación</span>
+          </div>
+          <div class="process-arrow">→</div>
+          <div class="process-step">
+            <div class="step-icon">🏷️</div>
+            <span>Envasado</span>
+          </div>
+        </div>
+        <div class="info-card">
+          <p>El Chutney de tomate de árbol es una preparación artesanal que combina el fruto con especias, azúcar y vinagre, logrando una conserva agridulce de sabor único. Es un producto tradicional de la gastronomía regional que permite aprovechar excedentes de producción y agregar valor al fruto.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- D17 — VIDEOS 13 Y 14 -->
+    <section class="slide" data-slide="17">
+      <div class="slide-content">
+        <h2 class="slide-title">Elaboración del Chutney</h2>
+        <div class="video-pair">
+          <div class="video-placeholder" data-video="video-13.mp4">
+            <video controls preload="metadata" playsinline>
+              <source src="assets/videos/video-13.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-placeholder" data-video="video-14.mp4">
+            <video controls preload="metadata" playsinline>
+              <source src="assets/videos/video-14.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- D18 — USOS DEL CHILTO -->
+    <section class="slide" data-slide="18">
+      <div class="slide-content">
+        <h2 class="slide-title">Usos del Chilto</h2>
+        <div class="uses-grid">
+          <div class="use-card">
+            <div class="use-icon">🍽️</div>
+            <h3>Consumo fresco</h3>
+            <p>Se consume directamente como fruta fresca, sola o en ensaladas.</p>
+          </div>
+          <div class="use-card">
+            <div class="use-icon">🥤</div>
+            <h3>Jugo</h3>
+            <p>Bebida natural rica en nutrientes y vitaminas.</p>
+          </div>
+          <div class="use-card">
+            <div class="use-icon">🫙</div>
+            <h3>Chutney</h3>
+            <p>Conserva agridulce artesanal de alto valor gastronómico.</p>
+          </div>
+          <div class="use-card">
+            <div class="use-icon">🍳</div>
+            <h3>Gastronomía</h3>
+            <p>Ingrediente en salsas, postres, helados y platos regionales.</p>
+          </div>
+          <div class="use-card">
+            <div class="use-icon">🏭</div>
+            <h3>Productos elaborados</h3>
+            <p>Mermeladas, jaleas, deshidratados y pulpas congeladas.</p>
+          </div>
+          <div class="use-card">
+            <div class="use-icon">🔄</div>
+            <h3>Transformación</h3>
+            <p>Agregado de valor mediante procesos agroindustriales sostenibles.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- D19 — VIDEOS 15, 16 Y 17 -->
+    <section class="slide" data-slide="19">
+      <div class="slide-content">
+        <h2 class="slide-title">Usos y aprovechamiento del Chilto</h2>
+        <div class="video-grid video-grid-3">
+          <div class="video-placeholder" data-video="video-15.mp4">
+            <video controls preload="metadata" playsinline>
+              <source src="assets/videos/video-15.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-placeholder" data-video="video-16.mp4">
+            <video controls preload="metadata" playsinline>
+              <source src="assets/videos/video-16.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-placeholder" data-video="video-17.mp4">
+            <video controls preload="metadata" playsinline>
+              <source src="assets/videos/video-17.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- D20 — AGRADECIMIENTOS -->
+    <section class="slide" data-slide="20">
+      <div class="slide-content center">
+        <h2 class="slide-title">Agradecimientos</h2>
+        <div class="thanks-cards">
+          <div class="thanks-card">
+            <div class="thanks-icon">🌾</div>
+            <h3>Ing. Agr. Nidia Leiva</h3>
+            <p>INTA</p>
+          </div>
+          <div class="thanks-card">
+            <div class="thanks-icon">🏛️</div>
+            <h3>Javier Abraham</h3>
+            <p>Municipalidad de Tafí Viejo</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- D21 — AUTORIDADES Y DOCENTES -->
+    <section class="slide" data-slide="21">
+      <div class="slide-content center">
+        <h2 class="slide-title">Autoridades y docentes del I.A.O.C.</h2>
+        <div class="pending-auth">
+          <p>Espacio reservado para agregar posteriormente:</p>
+          <ul>
+            <li>Nombres de autoridades</li>
+            <li>Cargos institucionales</li>
+            <li>Fotografías</li>
+            <li>Docentes participantes</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- D22 — CIERRE -->
+    <section class="slide" data-slide="22">
+      <div class="slide-bg"></div>
+      <div class="slide-content center">
+        <div class="closing-content">
+          <h1 class="closing-title">Tomate de árbol, <span>Chilto</span></h1>
+          <p class="closing-subtitle">Instituto Agrotécnico Obispo Colombres</p>
+          <p class="closing-phrase">"De la semilla al fruto, del conocimiento al desarrollo sostenible"</p>
+          <button id="back-to-start" class="btn-primary" onclick="goToSlide(1)">Volver al inicio</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
